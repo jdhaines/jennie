@@ -1,0 +1,248 @@
+/*body styling*/
+body {
+	font-family: 'Roboto', sans-serif;
+	margin-left: auto;
+	margin-right: auto;
+}
+.standard {
+	width: 1000px;
+}
+a {
+	text-decoration: inherit;
+	font-style: inherit;
+	color: #006BB7;
+}
+.labels {
+	padding-right: 10px;
+}
+/*preheader*/
+.preHeader {
+	list-style: none;
+	text-align: center;
+	/*background-color: #f3f3f3;*/
+	font-size: .8em;
+    line-height: .8em;
+}
+.preHeader ul {
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.preHeader li {
+	display:inline;
+}
+.preHeader a {
+	display: inline-block;
+	padding: 10px;
+}
+.preHeader a:hover {
+	text-decoration: underline;
+}
+/*header*/
+.header {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header a {
+	color: #FFF;
+}
+.blue_box {
+	
+	background-color: #006BB7;
+	color: #FFFFFF;
+	overflow: hidden;
+	border: none;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+#headerLogo {
+	margin: 15px;
+	float: left;
+}
+/*main*/
+.main {
+	padding-left: 30px;
+	padding-right: 30px;
+}
+hr {
+	/*border-top: 3px solid #006BB7;*/
+	height: 3px;
+	color: #006BB7;
+	background-image: linear-gradient(to right, #FFFFFF, #006BB7, #FFFFFF);
+}
+.big_button_left {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 25%;
+	float: left;
+	margin: 80px;
+}
+.big_button_right {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 25%;
+	float: right;
+	margin: 80px;
+}
+.big_button_center {
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 25%;
+	margin: 0px 80px 80px 80px;
+	margin-left: auto;
+    margin-right: auto;
+}
+.button_wrapper {
+	width: 940px;
+	margin-Left: auto;
+	margin-right: auto;
+	display: block;
+}
+.centered_text {
+	text-align: center;
+}
+.form_wrapper {
+	width: 60%;
+	margin-left: auto;
+	margin-right: auto;
+}
+.lookup_button {
+	float: right;
+}
+li {
+	list-style: none;
+}
+/*documentation*/
+pre {
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+}
+#sqlimg {
+	text-align: center;
+}
+/*footer*/
+.footer {
+	list-style: none;
+	text-align: center;
+	background-color: #006BB7;
+	color: #FFFFFF;
+	overflow: hidden;
+	border: none;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.footer ul {
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+.footer li {
+	display:inline;
+}
+.footer a {
+	display: inline-block;
+	padding: 10px;
+	color: #FFF;
+}
+.footer a:hover {
+	text-decoration: underline;
+}
+/*form element styling*/
+#installationComments, #reason1Comments, #reason1StepsComments, #reason2Comments, #reason2StepsComments, #startupComments, #specialEventsBox{
+	width: 400px;
+}
+/* Alert Box */
+.alert-box {
+    border-radius:10px;
+    font-size:16px;
+    padding:10px 10px 10px 36px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+.error {
+    background:#ffecec url('../img/error.png') no-repeat 10px 50%;
+    border:2px solid red;
+    color: red;
+}
+.success {
+    background:#e9ffd9 url('../img/success.png') no-repeat 10px 50%;
+    border:2px solid green;
+    color: green;
+}
+.warning {
+    background:#fff8c4 url('../img/warning.png') no-repeat 10px 50%;
+    border:1px solid #f2c779;
+}
+.notice {
+    background:#e3f7fc url('../img/notice.png') no-repeat 10px 50%;
+    border:1px solid #8ed9f6;
+}
+/*Data Display Page*/
+.display {
+	width: 100%;
+}
+table {
+	width: 100%;
+	text-align: center;
+	margin-top: 80px;
+	margin-bottom: 80px;
+	table-layout: fixed;
+	white-space: normal;
+}
+table td {
+	border: 1px solid black;
+	word-wrap: break-word;
+}
+.first_row {
+	font-weight: bold;
+}
+.odd_row {
+	background-color: #d6d6d6;
+}
+.col_0 {
+	width: 2%;
+}
+.col_1 {
+	width: 5%;
+}
+.col_2 {
+	width: 5%;
+}
+.col_3 {
+	width: 6%;
+}
+.col_4 {
+	width: 6%;
+}
+.col_5 {
+	width: 16%;
+}
+.col_6 {
+	width: 16%;
+}
+.col_7 {
+	width: 5%;
+}
+.col_8 {
+	width: 16%;
+}
+.col_9 {
+	width: 5%;
+}
+.col_10 {
+	width: 16%;
+}
+

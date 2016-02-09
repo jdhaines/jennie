@@ -1,0 +1,86 @@
+{% extends "wrapper.html" %}
+{% block content %}
+<!-- main div is started here -->
+<div class="form_wrapper">
+    {% if newBushingEntry %}
+        <div class="alert-box success">
+        <p>Your bushing is not in the database.  Please enter new details.</p>
+        </div>
+    {% endif %}
+    {% if bushingExists %}
+    <div class="alert-box success">
+    <p>Your bushing was found.  The database details are shown.  Make any changes needed and re-submit.</p>
+    </div>
+    {% endif %}
+    {% if success %}
+        <div class="alert-box success">
+            <p>Your bushing information has been successfully submitted / updated.
+            <br/>Thank you!</p>
+            <form action="/" method="GET">
+                <p><input class="home_button" type="submit" value="Home" name="Home"></p>
+            </form>
+        </div>
+
+    {% else %}
+        {% for message in form.bushingSerial.errors %}
+            <div class="alert-box error">{{ message }}</div>
+        {% endfor %}
+        {% for message in form.bushingModel.errors %}
+            <div class="alert-box error">{{ message }}</div>
+        {% endfor %}
+        {% for message in form.bushingPlant.errors %}
+            <div class="alert-box error">{{ message }}</div>
+        {% endfor %}
+        {% for message in form.bushingFurnace.errors %}
+            <div class="alert-box error">{{ message }}</div>
+        {% endfor %}
+    <!-- <h1>Forming Room Information</h1> -->
+    <form action="{{ url_for('plants')}}" method="POST" name="bushingInfo">
+        {{ form.hidden_tag() }}
+        <div class="bushingInformationSection">
+            <h1>Bushing Information</h1>
+            <p>Enter the Bushing Serial Number: {{ form.bushingSerial(size=18) }}</p>
+            <!-- generates the placeholder -->
+            {% if lookup %}{% set a = form.bushingModel.process_data(lookup.bushingModel) %}{% endif %}
+            <p>Bushing Model: {{ form.bushingModel(size=1) }}</p>
+            {% if lookup %}{% set b = form.bushingPlant.process_data(lookup.bushingPlant) %}{% endif %}
+            <p>Bushing Plant: {{ form.bushingPlant(size=1) }}</p>
+            {% if lookup %}{% set c = form.bushingFurnace.process_data(lookup.bushingFurnace) %}{% endif %}
+            <p>Bushing Furnace: {{ form.bushingFurnace(size=1) }}</p>
+            <!-- <p class="lookup_button"><input type="submit" value="Lookup Bushing Info"></p> -->
+            <div class="clearfix"></div>
+        </div>
+        <hr class="style-one" />
+        <div class="installationSection">
+            <h1>Installation & Early Life</h1>
+            <p>Were there any installation issues?</p>
+            {% if lookup %}{% set d = form.installationComments.process_data(lookup.installationComments) %}{% endif %}
+            <p>{{ form.installationComments(rows="6")}}<p>
+            <p>Were there any start-up issues?</p>
+            {% if lookup %}{% set e = form.startupComments.process_data(lookup.startupComments) %}{% endif %}
+            <p>{{ form.startupComments(rows="6")}}
+        </div>
+        <hr class="style-one" />
+        <div class="failure1Section">
+            <h1>Primary Failure Mode</h1>
+            {% if lookup %}{% set f = form.reason1.process_data(lookup.reason1) %}{% endif %}
+            <p>Primary Failure Mode: {{ form.reason1(size=1) }}</p>
+            <p>Comments:</p>
+            {% if lookup %}{% set g = form.reason1Comments.process_data(lookup.reason1Comments) %}{% endif %}
+            <p>{{ form.reason1Comments(rows="6")}}<p>
+        </div>
+        <hr class="style-one" />
+        <div class="failure2Section">
+            <h1>Secondary Failure Mode</h1>
+            {% if lookup %}{% set h = form.reason2.process_data(lookup.reason2) %}{% endif %}
+            <p>Secondary Failure Mode: {{ form.reason2(size=1) }}</p>
+            <p>Comments:</p>
+            {% if lookup %}{% set i = form.reason2Comments.process_data(lookup.reason2Comments) %}{% endif %}
+            <p>{{ form.reason2Comments(rows="6")}}<p>
+        </div>
+        <p><input type="submit" value="Submit"></p>
+    </form>
+    {% endif %}
+</div> <!-- end form_wrapper -->
+<!-- main div is ended here -->
+{% endblock %}
