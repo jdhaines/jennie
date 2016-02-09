@@ -1,0 +1,29 @@
+{
+  "name": "jennie",
+  "version": "1.0.0",
+  "description": "Jennie's Teaching Website (Flask App)",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.0.5"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdhaines/jennie.git"
+  },
+  "keywords": [
+    "jennie",
+    "tatum",
+    "teaching"
+  ],
+  "author": "Josh Haines",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jdhaines/jennie/issues"
+  },
+  "homepage": "https://github.com/jdhaines/jennie#readme"
+}

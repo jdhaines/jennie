@@ -1,3 +1,6 @@
-#!Bushing Failure Historian/bin/python
+"""Run the flask app on local test server."""
+#!jennie/bin/python
 from app import app
 app.run(debug=True)
+
+# end
